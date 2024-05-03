@@ -17,7 +17,7 @@
     <div data-template="popup">
         <video src="lesson-06_08-create-task.mp4"></video>
         <h2>Creating forms</h2>
-        <p>Noodl comes with multiple ways of capturing user data. The simplest way is to build a form with the UI controls in Noodls core nodes.</p>
+        <p>Code Crusher comes with multiple ways of capturing user data. The simplest way is to build a form with the UI controls in Code Crushers core nodes.</p>
         <p>You already have some experience with Buttons and Text Inputs, but you can also add Dropdowns, Sliders, Checkboxes, Date Pickers and much more.</p>
         <p>In this lesson you will build a simple form page that enables the user to create their own task cards. Let's get in to it!.</p>
     </div>
@@ -142,7 +142,7 @@
     data-conditions='[
         {
             "path":"/Create Card Page:%Page:%Group:%Group:1",
-            "hastype":"net.noodl.controls.options"
+            "hastype":"net.Code Crusher.controls.options"
         },
         {   
             "path":"/Create Card Page:%Page:%Group:%Group:1",
@@ -171,7 +171,7 @@
     data-conditions='[
         {
             "path":"/Create Card Page:%Page:%Group:%Group:1",
-            "hastype":"net.noodl.controls.options"
+            "hastype":"net.Code Crusher.controls.options"
         },
         {   
             "path":"/Create Card Page:%Page:%Group:%Group:1",
@@ -200,7 +200,7 @@
 data-conditions='[
         {
             "path":"/Create Card Page:%Page:%Group:%Group:1",
-            "hastype":"net.noodl.controls.options"
+            "hastype":"net.Code Crusher.controls.options"
         },
         {
             "path":"/Create Card Page:%Page:%Group:%Group:1",
@@ -235,7 +235,7 @@ data-conditions='[
     <div data-template="popup">
         <video src="lesson-06_04-datepicker-node.mp4"></video>
         <h2>Datepicker and other prefabs</h2>
-        <p>Besides the core nodes, Noodl comes with a bunch of pre-made components called prefabs. They are advanced components, built with regular core nodes. You can customize them to fit your needs, just like the components you build yourself.</p>
+        <p>Besides the core nodes, Code Crusher comes with a bunch of pre-made components called prefabs. They are advanced components, built with regular core nodes. You can customize them to fit your needs, just like the components you build yourself.</p>
         <p>Prefabs are not in your component list by default, but can be cloned through the Node Picker. When you clone a prefab a new copy of it gets added to your component list and can be dragged into your node graph.</p>
         <p>In the next step we will be importing the <strong>Date Picker</strong> prefab, so that the user can set a date on their new task cards.</p>
     </div>
@@ -381,7 +381,7 @@ data-conditions='[
 <div
     data-conditions='[
         {
-            "from": "/Create Card Page:%Page:%Group:%Group:%net.noodl.controls.textinput",
+            "from": "/Create Card Page:%Page:%Group:%Group:%net.Code Crusher.controls.textinput",
             "to": "/Create Card Page:%NewModel", 
             "hasconnection": "onTextChanged,prop-Title"
         }
@@ -402,7 +402,7 @@ data-conditions='[
 <div
     data-conditions='[
         {
-            "from": "/Create Card Page:%Page:%Group:%Group:%net.noodl.controls.options",
+            "from": "/Create Card Page:%Page:%Group:%Group:%net.Code Crusher.controls.options",
             "to": "/Create Card Page:%NewModel", 
             "hasconnection": "value,prop-Category"
         }
@@ -747,7 +747,7 @@ data-conditions='[
         <h2>Congratulations!</h2>
         <p>You've completed sixth tutorial! The longest one yet.</p>
         <p>See you in the last lesson, where you will learn how to work with the <strong>States</strong> node and logic components.</p>
-        <p>Happy Noodling!</p>
+        <p>Happy Crushing!</p>
         <!--<button style="width: 150px" onclick="window.open('https://www.youtube.com/watch?v=TNnn0Gzj-H4&list=PL2eC2vS4uVoMbujQ5CiNtNuP7s7-UwNn-')">WATCH TUTORIAL</button>-->
         <button style="width: 150px" data-click="exitEditor">EXIT LESSON</button>
     </div>
