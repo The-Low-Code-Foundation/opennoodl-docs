@@ -17,7 +17,7 @@
     <div data-template="popup">
         <video src="lesson-05_01-keylements.mp4"></video>
         <h2>Key elements of a navigation system</h2>
-        <p>All Noodl projects start with a simple navigation system in place. In previous lessons we went through the basics of navigation. Let's refresh the memory of what is needed for navigation in Noodl:</p>
+        <p>All Code Crusher projects start with a simple navigation system in place. In previous lessons we went through the basics of navigation. Let's refresh the memory of what is needed for navigation in Code Crusher:</p>
         <ol>
             <li><p>Multiple <strong>page components</strong> that each contain a page of your app. In this project you already have a <i>Start Page</i> and a <i>Task Page</i>.</p></li>
             <li><p>A <strong>Page Router</strong> node, that works as a container that controls which page component to show. This node is often placed in the <i>App</i> component.</p></li>
@@ -134,7 +134,7 @@
         <video src="lesson-05_04-pagescomponent.mp4"></video>
         <h2>The page component</h2>
         <p>Every page component comes with a <strong>Page</strong> node and a <strong>Page Inputs</strong> node. All children to the page node gets rendered on the page.</p>
-        <p>With the Page Inputs node, we can create Path and Query Inputs. They are used to send data into a page. You have probably seen this on other websites before, looking something like this: www.webshop.com/products<strong>?search=noodles</strong>.</p>
+        <p>With the Page Inputs node, we can create Path and Query Inputs. They are used to send data into a page. You have probably seen this on other websites before, looking something like this: www.webshop.com/products<strong>?search=Code Crusheres</strong>.</p>
         <p>We will take a closer look at this shortly, but first lets get a simple interface on this page.</p>
     </div>
 </div>
@@ -569,7 +569,7 @@ data-conditions='[
         <video src="lesson-05_17-navigateback.mp4"></video>
         <h2>Navigating back</h2>
         <p>You will now be navigated to the <i>Details Page</i> when you click a card. But what if you want to navigate back again?</p>
-        <p>The easiest way is just to use the <i>back</i> and <i>forward</i> controls built in to your browser. The Noodl editor has similar controls next to the Path Dropdown.</p>
+        <p>The easiest way is just to use the <i>back</i> and <i>forward</i> controls built in to your browser. The Code Crusher editor has similar controls next to the Path Dropdown.</p>
         <p>If you want to be fancy, you can use the <b>Navigate</b> node to create a custom <i>back</i> control. Let's do that.</p>
     </div>
 </div>
@@ -604,7 +604,7 @@ data-conditions='[
 <div
     data-conditions='[
     {
-        "from": "/Details Page:%Page:#Page Content:#Page body:%net.noodl.controls.button",
+        "from": "/Details Page:%Page:#Page Content:#Page body:%net.Code Crusher.controls.button",
         "to":"/Details Page:%RouterNavigate",
         "hasconnection": "onClick, navigate"
     }
@@ -659,7 +659,7 @@ data-conditions='[
         <p>Feel free to navigate back and forth to the details of each card if you have nothing better to do.</p>
         <p>Otherwise, it seems about time to start building your own app!</p>
         <!--<p>In the next tutorial we will learn how to create a form page to let the user create new Task items.</p>-->
-        <p>Happy Noodling!</p>
+        <p>Happy Crushing!</p>
         <!--<button style="width: 150px" onclick="window.open('https://www.youtube.com/watch?v=TNnn0Gzj-H4&list=PL2eC2vS4uVoMbujQ5CiNtNuP7s7-UwNn-')">WATCH TUTORIAL</button>-->
         <button style="width: 150px" data-click="exitEditor">EXIT LESSON</button>
     </div>
