@@ -8,8 +8,22 @@ title: Group node
 
 # Group
 
+<p>Tutorial 1: Styling</p>
+
 <div className="youtube-embed">
 <iframe width="400" height="225" src="https://www.youtube.com/embed/UkG_Oso-SF4?si=lgriY3TMowtpDutv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<p>Tutorial 2: Inner content styling</p>
+
+<div className="youtube-embed">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/W37E7GN_6co?si=oWe2HZHDJn5jaJad" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<p>Tutorial 3: Advanced options</p>
+
+<div className="youtube-embed">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/JM3ss15rn_E?si=-imzDH2-RnJMsu2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 This node is a styleable container. It can have other visual nodes nested inside of it.
@@ -27,8 +41,6 @@ The <span className="ndl-node">Group</span> is the most essential node when it c
 ![](/nodes/basic-elements/group/group_node.png)
 
 </div>
-
-<p>Testing node preview text</p>
 
 {/*##head##*/}
 
