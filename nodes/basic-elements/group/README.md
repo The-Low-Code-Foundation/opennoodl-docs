@@ -24,6 +24,8 @@ The <span className="ndl-node">Group</span> is the most essential node when it c
 
 </div>
 
+<p>Testing node preview text</p>
+
 {/*##head##*/}
 
 **Group** nodes are typically used to layout children by stacking (the default), but can also be used to simply provide margins and padding to a group of visual nodes. To learn more about **Group** nodes check out the [Layouting guide](/docs/guides/user-interfaces/layout).
