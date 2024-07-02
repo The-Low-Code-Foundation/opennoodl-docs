@@ -8,7 +8,9 @@ title: Group node
 
 # Group
 
+<div className="youtube-embed">
 <iframe width="400" height="225" src="https://www.youtube.com/embed/UkG_Oso-SF4?si=lgriY3TMowtpDutv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 This node is a styleable container. It can have other visual nodes nested inside of it.
 
