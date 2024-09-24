@@ -5,7 +5,7 @@
     "category": "Lessons",
     "name": "lesson_ai_walkthrough",
     "header": "Feature Highlight (15min)",
-    "title": "Code Crusher AI Walkthrough",
+    "title": "OpenNoodl AI Walkthrough",
     "completionBadge": "lessons/lesson-complete-badge.png",
     "type": "highlight"
   },
@@ -15,7 +15,7 @@
     "category": "Lessons",
     "name": "lesson_01_basics",
     "header": "Lesson 01 (15min)",
-    "title": "Code Crusher Basics",
+    "title": "OpenNoodl Basics",
     "completionBadge": "lessons/lesson-complete-badge.png"
   },
   {

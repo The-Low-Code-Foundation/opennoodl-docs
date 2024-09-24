@@ -11,7 +11,7 @@ const config = {
   title: 'Noodl',
   tagline: 'Dinosaurs are cool',
   url: 'https://the-low-code-foundation.github.io',
-  baseUrl: `/code-crusher-docs/`,
+  baseUrl: `/opennoodl-docs/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

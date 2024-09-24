@@ -1,9 +1,9 @@
 <!-- A step with just a popup -->
 <div data-template="popup"> 
     <video src="IT_01_Intro_video.mp4"></video>
-    <h2>Welcome to Code Crusher</h2>
-    <p>This tutorial will show you the basic concepts of Code Crusher, which will enable you to build powerful web applications.</p>
-    <p>We will build the small app shown in the video above, and introduce Code Crusher concepts along the way. Once you learn these concepts, and how to combine them, there will be virtually no limit to what you can create.</p>
+    <h2>Welcome to OpenNoodl</h2>
+    <p>This tutorial will show you the basic concepts of OpenNoodl, which will enable you to build powerful web applications.</p>
+    <p>We will build the small app shown in the video above, and introduce OpenNoodl concepts along the way. Once you learn these concepts, and how to combine them, there will be virtually no limit to what you can create.</p>
 </div>
 
 <!-- # -->
@@ -18,9 +18,9 @@
         <style>.lesson-item-popup {width: 600px !important;}</style>
         <video src="IT_02_node grapgh_video.mp4"></video>
         <h2>The node graph</h2>
-        <p>One of the core concepts of Code Crusher is the node graph. It's a collection of nodes (think of them as LEGO blocks) and connections between these nodes.</p>
+        <p>One of the core concepts of OpenNoodl is the node graph. It's a collection of nodes (think of them as LEGO blocks) and connections between these nodes.</p>
         <p>A node represents an element of your app. It can be a visual element like a <strong>Rectangle</strong> or something that's not directly visible, like a logical <strong>Counter</strong> node that operates on a number. When we connect these two nodes, it becomes a node graph.</p>
-        <p>With a node graph, we can create everything from prototypes to powerful web apps, which can be deployed directly from Code Crusher. Check out the graph above, and don't worry if it looks complicated at first, we'll build it from scratch during this lesson.</p>
+        <p>With a node graph, we can create everything from prototypes to powerful web apps, which can be deployed directly from OpenNoodl. Check out the graph above, and don't worry if it looks complicated at first, we'll build it from scratch during this lesson.</p>
     </div>
 </div>
 
@@ -144,7 +144,7 @@
         <video src="IT_08_node picker video.mp4"></video>
         <h2>The node picker</h2>
         <p>Open the node picker by clicking the "plus" icon in the top bar, or right click in the empty space of the node graph.</p>
-        <p>Here you can browse all the core nodes in Code Crusher and their categories, and read about how to use them.</p>
+        <p>Here you can browse all the core nodes in OpenNoodl and their categories, and read about how to use them.</p>
         <p>Under each category, you can see the corresponding nodes. Create nodes by clicking on them.</p>
     </div>
 </div>
@@ -509,7 +509,7 @@
         <style>.lesson-item-popup {width: 600px !important;}</style>
         <video src="IT_15_ui_controls.mp4"></video>
         <h2>UI Controls</h2>
-        <p>Code Crusher comes with a set of pre-styled UI controls, so you easily can place a button, a checkbox, or a slider into your application.</p>
+        <p>OpenNoodl comes with a set of pre-styled UI controls, so you easily can place a button, a checkbox, or a slider into your application.</p>
         <p>All controls have a wide range of properties that allows them to be styled and customized.</p>
     </div>
 </div>
@@ -520,7 +520,7 @@
 
 <div
     data-conditions='[
-        {"path":"/App:%Group:%net.Code Crusher.controls.button","exists":true}
+        {"path":"/App:%Group:%net.OpenNoodl.controls.button","exists":true}
     ]'
 >
     <div data-template="item">
@@ -561,7 +561,7 @@
 <div
     data-conditions='[
     {
-        "path":"/App:%Group:%net.Code Crusher.controls.button",
+        "path":"/App:%Group:%net.OpenNoodl.controls.button",
         "paramseq":{
             "sizeMode":"explicit",
             "height": {"value": 56, "unit": "px"}           
@@ -587,7 +587,7 @@
 <div
     data-conditions='[
         {
-            "path":"/App:%Group:%net.Code Crusher.controls.button",
+            "path":"/App:%Group:%net.OpenNoodl.controls.button",
             "paramseq": {
                 "marginRight": { "value": 24, "unit": "px" },
                 "marginLeft": { "value": 24, "unit": "px" },
@@ -614,7 +614,7 @@
 <div
     data-conditions='[
         {
-            "path":"/App:%Group:%net.Code Crusher.controls.button",
+            "path":"/App:%Group:%net.OpenNoodl.controls.button",
             "paramseq": {
                 "label": "Count up"
             }
@@ -645,8 +645,8 @@
         <style>.lesson-item-popup {width: 600px !important;}</style>
         <video src="IT_16_counter_info.mp4"></video>
         <h2>Logic & Utility nodes</h2>
-        <p>Code Crusher comes with a variety of nodes for creating logic and functionality. These nodes are grey and can be found under the Logic and Utility node category in the node picker. These nodes can't be part of the visual tree as they represent logic. They can be placed freely anywhere in the node graph around the visual nodes. </p>
-        <p>Most nodes take inputs and outputs from other nodes via connections. This is how you build up functionality in Code Crusher.</p>
+        <p>OpenNoodl comes with a variety of nodes for creating logic and functionality. These nodes are grey and can be found under the Logic and Utility node category in the node picker. These nodes can't be part of the visual tree as they represent logic. They can be placed freely anywhere in the node graph around the visual nodes. </p>
+        <p>Most nodes take inputs and outputs from other nodes via connections. This is how you build up functionality in OpenNoodl.</p>
         <p>We will use a Counter node to increase a number when the button is clicked.</p>
     </div>
 </div>
@@ -701,7 +701,7 @@
 <div
     data-conditions='[
         {
-            "from": "/App:%Group:%net.Code Crusher.controls.button",
+            "from": "/App:%Group:%net.OpenNoodl.controls.button",
             "to": "/App:%Counter",
             "hasconnection": "onClick, increase"
         }
@@ -755,7 +755,7 @@
         <style>.lesson-item-popup {width: 600px !important;}</style>
         <video src="IT_16_inspecting.mp4"></video>
         <h2>Inspecting connections</h2>
-        <p>A powerful feature of Code Crusher is how data and signals are visualized.</p>
+        <p>A powerful feature of OpenNoodl is how data and signals are visualized.</p>
         <p>Hover over a connection to see the current value. If you click on the tooltip you can pin it so it stays visible when you stop hovering. This makes it easy to debug your application.</p>
     </div>
 </div>
@@ -944,8 +944,8 @@
     <div data-template="popup">
         <video src="IT_18_save-combined.mp4"></video>
         <h2>Deploy your app</h2>
-        <p>Code Crusher supports multiple ways of deploying and sharing your app with the world. The fastest method is to use the Sandbox deploy feature, which lets you deploy to a custom Code Crusher URL.</p>
-        <p>You find the deploy popup in the right top corner. Type in your desired Code Crusher subdomain, and deploy your project with a single click on the Code Crusher.app domain.</p>
+        <p>OpenNoodl supports multiple ways of deploying and sharing your app with the world. The fastest method is to use the Sandbox deploy feature, which lets you deploy to a custom OpenNoodl URL.</p>
+        <p>You find the deploy popup in the right top corner. Type in your desired OpenNoodl subdomain, and deploy your project with a single click on the OpenNoodl.app domain.</p>
     </div>
 </div>
 -->
@@ -962,8 +962,8 @@
         <!--<img src="tutorial_card.png" style="cursor: pointer;" onclick="window.open('https://www.youtube.com/watch?v=TNnn0Gzj-H4&list=PL2eC2vS4uVoMbujQ5CiNtNuP7s7-UwNn-')"> -->
         <h2>Congratulations!</h2>
         <p>You've completed this tutorial, we hope you liked it!</p>
-        <p>To take your Code Crusher skills to the next level we recommend our second lesson on how to create lists from data.</p>
-        <p>Happy Crushing!</p>
+        <p>To take your OpenNoodl skills to the next level we recommend our second lesson on how to create lists from data.</p>
+        <p>Happy Noodling!</p>
         <!--<button style="width: 150px" onclick="window.open('https://www.youtube.com/watch?v=TNnn0Gzj-H4&list=PL2eC2vS4uVoMbujQ5CiNtNuP7s7-UwNn-')">WATCH TUTORIAL</button>-->
         <button style="width: 150px" data-click="exitEditor">EXIT LESSON</button>
     </div>
