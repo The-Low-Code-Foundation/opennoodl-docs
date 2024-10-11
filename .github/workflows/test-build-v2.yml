@@ -1,4 +1,4 @@
-name: Deploy Pages
+name: Build and Deploy Docusaurus Site
 
 on:
   push:
@@ -18,36 +18,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Check out the repository
       - uses: actions/checkout@v4
 
-      # Set up Node.js 18.x environment
-      - name: Use Node.js 18.x
+      # Use Node.js 18.x
+      - name: Set up Node.js 18.x
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
           cache: "npm"
 
-      # Clear NPM cache to avoid using corrupted caches
+      # Clear NPM cache to avoid corrupted or outdated dependencies
       - name: Clear NPM cache
         run: npm cache clean --force
 
-      # Update browserslist database to avoid outdated warnings
+      # Update the Browserslist database to avoid build issues
       - name: Update Browserslist DB
         run: npx update-browserslist-db@latest
 
-      # Install dependencies using package-lock.json and skip audit temporarily
+      # Install dependencies with npm ci to ensure consistent versions (using package-lock.json)
       - name: Install dependencies
         run: npm ci --no-audit
 
-      # Run the build process with verbose logging to capture detailed errors
-      - name: Build project
+      # Build the project with verbose logging to help with any debugging
+      - name: Build the Docusaurus site
         run: npm run build --loglevel verbose
 
-      # Disable Jekyll by adding a `.nojekyll` file to the output directory
+      # Add the .nojekyll file to prevent GitHub Pages from processing the site with Jekyll
       - name: Disable Jekyll for GitHub Pages
         run: echo "" > build/.nojekyll
 
-      # Upload the build artifact to be deployed
+      # Upload the built site as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
@@ -60,6 +61,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Check out the repository (for context in deployment)
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -67,7 +69,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      # Deploy the build to GitHub Pages
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
