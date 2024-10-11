@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "deploy-pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -24,23 +24,17 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
-      
+
       # Clear NPM cache to avoid corrupted caches
       - run: npm cache clean --force
 
-      # Update browserslist database
-      - run: npx update-browserslist-db@latest
+      # Install dependencies using package-lock.json and skip audit
+      - run: npm ci --no-audit
 
-      # Install dependencies using package-lock.json for consistency
-      - run: npm ci
-
-      # Optional: Fix vulnerabilities without breaking changes
-      - run: npm audit fix
-
-      # Run the build step with verbose logging for easier debugging
+      # Run the build step with verbose logging for debugging
       - run: npm run build --loglevel verbose
 
-      # Upload the artifact
+      # Upload the build artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
