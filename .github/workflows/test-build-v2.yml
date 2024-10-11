@@ -19,25 +19,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Set up Node.js 18.x environment
       - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
           cache: "npm"
-      
-      # Clear NPM cache to avoid corrupted caches
-      - run: npm cache clean --force
 
-      # Update browserslist database to avoid build issues
-      - run: npx update-browserslist-db@latest
+      # Clear NPM cache to avoid using corrupted caches
+      - name: Clear NPM cache
+        run: npm cache clean --force
 
-      # Install dependencies using package-lock.json for consistency
-      - run: npm ci --no-audit
+      # Update browserslist database to avoid outdated warnings
+      - name: Update Browserslist DB
+        run: npx update-browserslist-db@latest
 
-      # Run the build step with verbose logging for easier debugging
-      - run: npm run build --loglevel verbose
+      # Install dependencies using package-lock.json and skip audit temporarily
+      - name: Install dependencies
+        run: npm ci --no-audit
 
-      # Upload the artifact
+      # Run the build process with verbose logging to capture detailed errors
+      - name: Build project
+        run: npm run build --loglevel verbose
+
+      # Disable Jekyll by adding a `.nojekyll` file to the output directory
+      - name: Disable Jekyll for GitHub Pages
+        run: echo "" > build/.nojekyll
+
+      # Upload the build artifact to be deployed
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
@@ -52,8 +62,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # Setup for deploying to GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
+      # Deploy the build to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
