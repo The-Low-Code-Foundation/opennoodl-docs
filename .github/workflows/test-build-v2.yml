@@ -24,17 +24,20 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
-
+      
       # Clear NPM cache to avoid corrupted caches
       - run: npm cache clean --force
 
-      # Install dependencies using package-lock.json and skip audit
+      # Update browserslist database to avoid build issues
+      - run: npx update-browserslist-db@latest
+
+      # Install dependencies using package-lock.json for consistency
       - run: npm ci --no-audit
 
-      # Run the build step with verbose logging for debugging
+      # Run the build step with verbose logging for easier debugging
       - run: npm run build --loglevel verbose
 
-      # Upload the build artifact
+      # Upload the artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
