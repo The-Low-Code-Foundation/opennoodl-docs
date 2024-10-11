@@ -24,10 +24,23 @@ jobs:
         with:
           node-version: 18.x
           cache: "npm"
-      - run: npm cache clean --force  # Force clean cache
-      - run: npx update-browserslist-db@latest  # Update browserslist DB
-      - run: npm ci  # Use npm ci to ensure consistent dependency installation
-      - run: npm run build --loglevel verbose  # Enable verbose logging for debugging
+      
+      # Clear NPM cache to avoid corrupted caches
+      - run: npm cache clean --force
+
+      # Update browserslist database
+      - run: npx update-browserslist-db@latest
+
+      # Install dependencies using package-lock.json for consistency
+      - run: npm ci
+
+      # Optional: Fix vulnerabilities without breaking changes
+      - run: npm audit fix
+
+      # Run the build step with verbose logging for easier debugging
+      - run: npm run build --loglevel verbose
+
+      # Upload the artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
