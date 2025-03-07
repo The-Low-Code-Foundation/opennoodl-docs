@@ -13,7 +13,7 @@ This node places a customizable checkbox in the visual tree.
 <div className="ndl-image-with-background l">
 
 ![](/nodes/ui-controls/checkbox/checkbox_visual.png)
-
+.
 </div>
 
 The checkbox will flip its state when clicked and its <span className="ndl-data">Checked</span> property can be connected to a data source, such as a <span className="ndl-data">variable</span> or <span className="ndl-data">object</span>.
@@ -21,7 +21,7 @@ The checkbox will flip its state when clicked and its <span className="ndl-data"
 <div className="ndl-image-with-background l">
 
 ![](/nodes/ui-controls/checkbox/checkbox_node.png)
-
+ .
 </div>
 
 {/*##head##*/}
@@ -31,7 +31,7 @@ This control contains all logic such as accessibility etc. It can be styled in v
 <div className="ndl-image-with-background s">
 
 ![](/nodes/ui-controls/checkbox/checkbox.gif)
-
+.
 </div>
 
 ## Inputs
@@ -50,8 +50,12 @@ The main input of the Checkbox node is the <span className="ndl-data">Checked</s
 It can be enabled and disabled using the <span className="ndl-data">Enabled</span> input:
 
 <div className="ndl-table-35-65">
+    <!-- @include "../../shared-props/inputs/_enabled.md" 
+    // Removed becuase docasaurus isn't configured for importing markdown files! -->
 
-@include "../../shared-props/inputs/_enabled.md"
+| Data                                      | Description                                                                                                                                                            |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span className="ndl-data">Enabled</span> | {/*##input:enabled##*/}Specifies if the control is **Enabled** (`true`) or **Disabled** (`false`). A disabled control will not respond to any user interaction.{/*##input##*/} |
 
 </div>
 
