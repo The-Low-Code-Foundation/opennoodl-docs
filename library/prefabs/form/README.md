@@ -61,7 +61,7 @@ These are the default form control types in the prefab:
 - `Slider`, also accepts **Min**, **Max** and **Steps** and will produce a number form value.
 - `Drop Down`, also accepts an array with strings **Options** and a corresponding array **Labels**. The options array represents the different values that can be picked, and the labels array contains the labels shown in the ui control corresponding to each option value.
 - `Date Input`, shows a date picker.
-- `Check Box`, also accepts **Text** as an extra label, it will product a boolean form value.
+- `Checkbox`, also accepts **Text** as an extra label, it will product a boolean form value.
 - `Single Choice`, also accepts **Options** and **Labels** as with the dropdown, this shows all options as radio buttons.
 - `Multi Choice`, also accepts **Options** and **Labels** as with the dropdown, this shows all options as check boxes.
 
