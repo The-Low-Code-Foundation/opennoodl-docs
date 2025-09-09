@@ -1,15 +1,15 @@
 /**
  * Inspired by https://github.com/hashicorp/web-platform-packages/tree/9723b25a054674f9c2bebc12928377c35957508f/packages/remark-plugins/plugins/include-markdown
- * 
+ *
  * Problem with that page is that it is not ES6,
  * which Docusaurus doesn't support yet.
  */
 
-const path = require('path')
-const { remark } = require('remark')
-const remarkMdx = require('remark-mdx')
-const { _parseNoodlMarkupPlugin } = require('./markdown-syntax')
-const readFileSync = require('fs').readFileSync
+import path from 'path'
+import { remark } from 'remark'
+import remarkMdx from 'remark-mdx'
+import { _parseNoodlMarkupPlugin } from './markdown-syntax.js'
+import { readFileSync } from 'fs'
 
 function flatMap(ast, fn) {
   return transform(ast, 0, null)[0]
@@ -73,7 +73,7 @@ function includeMarkdownPlugin({
         // (takes a couple steps because we're processing includes with remark)
         const processor = remark().use(_parseNoodlMarkupPlugin)
         // NOTE: Use our _parseNoodlMarkupPlugin plugin
-        
+
         // use remark-mdx to process the include contents
         processor.use(remarkMdx)
 

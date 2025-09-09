@@ -22,7 +22,7 @@ function copyNodeMarkdowns(dir, asFolderName) {
             const filePath = path.join(dir, file);
             const content = fs.readFileSync(filePath)
             const resolved = resolveImports(content.toString(), dir)
-            
+
             let outputFilePath = 'build/' + filePath;
             if (asFolderName) {
                 // HACK: Resolve the new nodes folder structure
@@ -30,7 +30,7 @@ function copyNodeMarkdowns(dir, asFolderName) {
             }
 
             if (!fs.existsSync('build/' + dir)) {
-                fs.mkdirSync('build/' + dir);
+                fs.mkdirSync('build/' + dir, {recursive: true});
             }
             fs.writeFileSync(outputFilePath, resolved)
         }
