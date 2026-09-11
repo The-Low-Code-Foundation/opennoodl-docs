@@ -202,7 +202,7 @@
   },
   {
     "label": "Intl Format",
-    "desc": "Locale-aware formatting nodes built on the browser's Intl APIs — no dependencies, no network. Relative Time turns a date into \"3 hours ago\" with an optional auto-refresh interval; Format Number handles decimal, currency and percent styles; Format List joins items with a localized conjunction or disjunction; Pluralize picks the right one/other form with Intl.PluralRules. Every node has a Locale input defaulting to the browser language, and every input is guarded — an unconnected input yields an empty string instead of throwing.",
+    "desc": "Locale-aware formatting nodes built on the browser's Intl APIs — no dependencies, no network. Relative Time turns a date into \"3 hours ago\" with an optional auto-refresh interval; Format Number handles decimal, currency and percent styles; Format List joins items with a localized conjunction or disjunction; Pluralize picks the right one/other form with Intl.PluralRules. Every node has a Locale input defaulting to the browser language, and every input is guarded — an unconnected input yields an empty string instead of throwing. NOT the part for formatting a date you already hold — \"September 10th, 2026\", \"3:05 pm\" — that is the format-date part, which wraps the Date To String node. This module formats against the clock and against number, list and plural rules; the two do not overlap and an app that shows a post date and a \"posted 3 hours ago\" beside it wants both.",
     "project": "library/modules/intl-format-1.0.0.zip",
     "icon": "library/modules/intl-format-1.0.0.png",
     "docs": "/library/modules/intl-format/",
@@ -316,6 +316,21 @@
     "runtimeVersion": "2.7.0"
   },
   {
+    "label": "Media Recorder",
+    "desc": "Record audio or video in the browser and get a file you can upload. Ships a Record Media node — pick Audio or Video, fire Start and Stop, and get a File ready for Noodl.Files.upload plus a blob URL the built-in Video node plays back, with no base64 round trip. Permission denied, a device already in use and no device each fire their own signal as well as setting Error, and every track it opened is stopped on Stop, on Cancel and on unmount, so nothing leaves the camera light on. Feed it the Media Stream output of the Web Camera node to record an already-granted stream without a second permission prompt — a stream it did not open is never stopped. No dependencies, no network.",
+    "project": "library/modules/media-recorder-1.0.0.zip",
+    "icon": "library/modules/media-recorder-1.0.0.png",
+    "docs": "/library/modules/media-recorder/",
+    "tags": [
+      "Device",
+      "Media"
+    ],
+    "type": "module",
+    "version": "1.0.0",
+    "minEditorVersion": "0.1.0",
+    "runtimeVersion": "2.7.0"
+  },
+  {
     "label": "MQTT Module",
     "desc": "Send and receive messages over the MQTT protocol in web apps.",
     "project": "library/modules/mqtt-module-1.0.4.zip",
@@ -327,6 +342,22 @@
     ],
     "type": "module",
     "version": "1.0.4",
+    "minEditorVersion": "0.1.0",
+    "runtimeVersion": "2.7.0"
+  },
+  {
+    "label": "Charts",
+    "desc": "Bar Chart and Sparkline: two visual nodes that draw from an array. Wire a Static Data node or a query result into Series, name the field that holds the number, and the chart follows the data — in the editor, in a deploy, and in a React export, from one implementation. Every colour and space is a port defaulting to a design token.",
+    "project": "library/modules/nodegx-charts-1.0.0.zip",
+    "icon": "library/modules/nodegx-charts-1.0.0.png",
+    "docs": "/library/modules/nodegx-charts/",
+    "tags": [
+      "UI",
+      "Data",
+      "Custom nodes"
+    ],
+    "type": "module",
+    "version": "1.0.0",
     "minEditorVersion": "0.1.0",
     "runtimeVersion": "2.7.0"
   },

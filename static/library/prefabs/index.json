@@ -15,6 +15,20 @@
     "runtimeVersion": "2.7.0"
   },
   {
+    "label": "Advanced Columns",
+    "desc": "A Columns node with as many breakpoints as you want. A States node holds the layout string and both gaps for each band, an Expression holds the widths the bands change at, and the whole thing is driven by the Columns node's own measured width — not the viewport, so it behaves the same in a sidebar, a modal or a repeater cell. Ships with four bands set up: drop your content straight into it, and move a breakpoint width from the instance without opening the component.",
+    "project": "library/prefabs/advanced-columns-1.0.0.zip",
+    "icon": "library/prefabs/advanced-columns-1.0.0.png",
+    "docs": "/library/prefabs/advanced-columns/",
+    "tags": [
+      "UI",
+      "Layout"
+    ],
+    "type": "prefab",
+    "version": "1.0.0",
+    "minEditorVersion": "0.2.2"
+  },
+  {
     "label": "App Shell",
     "desc": "The frame an app lives inside: a sidebar (app name slot + data-driven nav items with active-route highlighting), a top bar (page title, actions slot, user area placeholder), and a content outlet where your Page Router goes. Nav items are a plain array (Label/Icon/Target) fed from a Static Data node or the Nav Items input; clicking one navigates to its Target and emits Nav Click/Nav Target. Below the Collapse Below breakpoint (default 768px) the sidebar collapses behind a hamburger button.",
     "project": "library/prefabs/app-shell-1.1.0.zip",
@@ -201,6 +215,31 @@
     "runtimeVersion": "2.7.0"
   },
   {
+    "label": "Format Date",
+    "desc": "Formats a date you already have, by name: \"long\" gives Thursday 10th September 2026, \"time\" gives 3:05 pm, \"datetime\", \"short\", \"iso\" — or pass Format to write your own token string. Wraps the Date To String node so an app asks for a shape instead of remembering twenty-one tokens, and passes Locale through, so weekday and month names follow it. NOT the same thing as the intl-format module: that one formats against the clock (\"3 hours ago\", auto-refreshing) and formats numbers, lists and plurals. This part formats a date you hold. Logic only — wire Text into a Text node.",
+    "project": "library/prefabs/format-date-1.0.0.zip",
+    "icon": "library/prefabs/format-date-1.0.0.png",
+    "docs": "/library/prefabs/format-date/",
+    "tags": [
+      "Utility",
+      "Localization"
+    ],
+    "type": "prefab",
+    "version": "1.0.0"
+  },
+  {
+    "label": "Format Full Name",
+    "desc": "First name and last name into one display string, plus the initials an avatar needs. Handles the three cases a String Format node gets wrong: a missing surname leaves no trailing space, a single field holding \"Ada Lovelace\" still initials as AL, and an empty name falls back to whatever you pass. Logic only, no UI — wire Full Name into a Text node and Initials into an avatar.",
+    "project": "library/prefabs/format-full-name-1.0.0.zip",
+    "icon": "library/prefabs/format-full-name-1.0.0.png",
+    "docs": "/library/prefabs/format-full-name/",
+    "tags": [
+      "Utility"
+    ],
+    "type": "prefab",
+    "version": "1.0.0"
+  },
+  {
     "label": "Image Cropper",
     "desc": "Image Cropper Module. Mainly intended for cropping profile pictures.",
     "project": "library/prefabs/image-cropper-1.7.1.zip",
@@ -381,6 +420,18 @@
     "version": "0.3.0",
     "minEditorVersion": "0.1.0",
     "runtimeVersion": "2.7.0"
+  },
+  {
+    "label": "Sanitise Email",
+    "desc": "Turns the address someone typed into the one you can store and compare: trimmed, lower-cased, unwrapped from a mailto: link or from the angle brackets a mail client pastes, with the domain split out and a validity flag beside it. Logic only, no UI — put it between a Text Input and whatever you save to, so two sign-ups for the same person are the same row.",
+    "project": "library/prefabs/sanitise-email-1.0.0.zip",
+    "icon": "library/prefabs/sanitise-email-1.0.0.png",
+    "docs": "/library/prefabs/sanitise-email/",
+    "tags": [
+      "Utility"
+    ],
+    "type": "prefab",
+    "version": "1.0.0"
   },
   {
     "label": "Search Bar",
